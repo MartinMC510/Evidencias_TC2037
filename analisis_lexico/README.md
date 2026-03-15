@@ -69,9 +69,18 @@ La complejidad de mi modelo (`regex_latin_word_identifier`) es de eficiencia asi
 
 Según el plan general en (Levitin,2012,p.62) para un análisis de complejidad, resulta:
 
-\[
-C(n) = \sum_{i=1}^{n-1} 1 = n
-\]
+El número de operaciones realizadas por el algoritmo es:
+
+$$
+C(n) = \sum_{i=1}^{n-1} 1 = n - 1
+$$
+
+Por lo tanto, la complejidad asintótica es:
+
+$$
+\Theta(n)
+$$
+
 
 Esto articula la eficiencia del autómata que modela el reconocimiento de este alfabeto.
 
