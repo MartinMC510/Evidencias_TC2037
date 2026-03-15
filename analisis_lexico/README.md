@@ -63,6 +63,8 @@ A través de una frase o texto que contenga latín como entrada, el programa det
 
 El archivo `regexp_latin.ipynb` contiene 20 casos de prueba utilizando las expresiones regulares definidas para validar el correcto funcionamiento del analizador léxico.
 
+---
+
 ## Análisis de Tiempo
 
 La complejidad de mi modelo (`regex_latin_word_identifier`) es de eficiencia asintótica lineal \(O(n)\) (Levitin, 2012), donde \(n\) es la longitud de la cadena ingresada. 
@@ -87,6 +89,8 @@ Esto articula la eficiencia del autómata que modela el reconocimiento de este a
 Se utilizó la biblioteca `re` o `regex`, instalada a través de **Anaconda Navigator**. El uso de expresiones regulares permite alcanzar una alta velocidad para cumplir con la meta de reconocer el alfabeto en cuestión.
 
 Una solución alternativa sería utilizar bucles anidados donde se considere cada elemento de la cadena introducida. Sin embargo, este enfoque resultaría computacionalmente más costoso, con complejidades aproximadas de \(O(n^2)\) o incluso \(O(n^3)\).
+
+---
 
 ## Referencias
 
