@@ -56,10 +56,7 @@ Mapa local 1                 Mapa local 2
       +-------------+--------------+
                     |
                     v
-          Sección crítica con mutex
-                    |
-                    v
-          Resultado global combinado
+          Resultado global combinado con mutex
                     |
                     v
           Frecuencia final de palabras
@@ -285,3 +282,5 @@ En conclusión, el paradigma concurrente es apropiado para este problema porque 
 
 - Stroustrup, B. (2013). *The C++ Programming Language* (4th ed.). Addison-Wesley Professional.  
   Usado como referencia para conceptos del lenguaje C++.
+- Weiss, M. A. (2014). *Data Structures and Algorithm Analysis in C++* (4th ed.). Pearson/Addison-Wesley.  
+  Usado como referencia para el análisis de algoritmos-- complejidad logarítmica.
