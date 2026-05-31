@@ -47,6 +47,9 @@ Conversión de DFA a Expresión Regular:
 
 Según las expresiones regulares definidas en `regexp_latin.ipynb` y la función `regex_latin_word_identifier`, se puede realizar una búsqueda para identificar el idioma.
 
+Asimismo, en el archivo `dfa_latin.pl` se encuentra la implementación de un programa/autómata en Prolog diseñado para reconocer el alfabeto en cuestión. Mediante reglas como `contiene_patron` y `encontrar`, el programa es capaz de escanear una secuencia de caracteres latinos y detectar los patrones relevantes para la tarea.
+
+
 A través de una frase o texto que contenga latín como entrada, el programa determinará si dicho texto contiene una o ambas palabras.
 
 ### Ejemplos
@@ -67,6 +70,35 @@ El archivo `regexp_latin.ipynb` contiene 20 casos de prueba utilizando las expre
 
 ## Análisis de Tiempo
 
+### Autómata en Prolog
+
+La solución implementada en Prolog realiza un escaneo secuencial sobre una lista de caracteres que representa el texto latino. El objetivo del programa es detectar si dentro del texto aparece alguno de los patrones relevantes del proyecto, como `aud` o `regul`.
+
+Sea:
+
+- `n` = número total de caracteres en el texto de entrada.
+- `m` = longitud del patrón que se desea reconocer.
+
+En este proyecto, los patrones son pequeños y fijos:
+
+- `aud` tiene longitud 3.
+- `regul` tiene longitud 5.
+
+Por lo tanto, `m` puede considerarse constante.
+
+El programa revisa la lista desde el primer símbolo hasta el último. En cada posición, intenta verificar si el patrón comienza ahí. Si no encuentra coincidencia, avanza al siguiente símbolo y repite el proceso.
+
+En el peor caso, el patrón no aparece en el texto, por lo que el programa debe revisar todas las posiciones de la entrada. Como los patrones tienen longitud fija, la comparación en cada posición toma tiempo constante.
+
+Por esta razón, la complejidad temporal asintótica de la solución es:
+
+$$
+O(n)
+$$  
+
+Esto significa que el tiempo de ejecución crece linealmente con respecto al tamaño del texto de entrada.
+
+### Expresión regular
 La complejidad de mi modelo (`regex_latin_word_identifier`) es de eficiencia asintótica lineal \(O(n)\) (Levitin, 2012), donde \(n\) es la longitud de la cadena ingresada. 
 
 Según el plan general en (Levitin,2012,p.62) para un análisis de complejidad, resulta:
